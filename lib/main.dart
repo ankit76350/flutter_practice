@@ -37,23 +37,21 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body: ListView(
-        children: [
-          Padding(     
+      body: ListView.builder(
+
+        itemBuilder: (context, index) {
+          return Padding(
             padding: const EdgeInsets.all(8.0),
             child: Text(
               'One',
               style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(
-              'Two',
-              style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),
-            ),
-          ),
-        ],
+          );
+        },
+        itemCount: 10, 
+        // separatorBuilder: (context,index){
+        //   return Divider(height: 4, thickness: 2,)
+        // }
       ),
     );
   }
