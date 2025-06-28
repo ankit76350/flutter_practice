@@ -37,24 +37,9 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body: Center(
-        child: CircleAvatar(
-          backgroundColor: Colors.green,
-          maxRadius: 60,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Container(
-                width: 40,
-                height: 40,
-                child: Image.asset('images/unnamed.jpg'),
-              ),
-              SizedBox(height: 5),
-              Text('Name', style: TextStyle(color: Colors.white)),
-            ],
-          ),
-        ),
-      ),
+      body: Text(
+        'Hello World',style: TextStyle(fontFamily: 'LibertinusMono'),
+      )
     );
   }
 }
