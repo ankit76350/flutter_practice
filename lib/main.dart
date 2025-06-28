@@ -37,80 +37,23 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-
-              Padding(
-                padding: EdgeInsets.all(1), 
-                child:SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child:Row(
-                children: [
-                  Container(
-                    margin: EdgeInsets.only(bottom: 11),
-                    width: 120,
-                    height: 200,
-                    color: Colors.lightGreen,
-                  ),
-                  Container(
-                    margin: EdgeInsets.only(bottom: 11),
-                    width: 120,
-                    height: 200,
-                    color: const Color.fromARGB(255, 195, 100, 74),
-                  ),
-                  Container(
-                    margin: EdgeInsets.only(bottom: 11),
-                    width: 120,
-                    height: 200,
-                    color: const Color.fromARGB(255, 74, 195, 179),
-                  ),
-                  Container(
-                    margin: EdgeInsets.only(bottom: 11),
-                    width: 120,
-                    height: 200,
-                    color: const Color.fromARGB(255, 195, 74, 191),
-                  ),
-                  Container(
-                    margin: EdgeInsets.only(bottom: 11),
-                    width: 120,
-                    height: 200,
-                    color: const Color.fromARGB(255, 191, 195, 74),
-                  ),
-                ],
-              )
-              )),
-
-              Container(
-                margin: EdgeInsets.only(bottom: 11),
-                height: 200,
-                color: const Color.fromARGB(255, 195, 112, 74),
-              ),
-              Container(
-                margin: EdgeInsets.only(bottom: 11),
-                height: 200,
-                color: const Color.fromARGB(255, 195, 175, 74),
-              ),
-              Container(
-                margin: EdgeInsets.only(bottom: 11),
-                height: 200,
-                color: const Color.fromARGB(255, 151, 195, 74),
-              ),
-              Container(
-                margin: EdgeInsets.only(bottom: 11),
-                height: 200,
-                color: const Color.fromARGB(255, 195, 74, 74),
-              ),
-              Container(
-                margin: EdgeInsets.only(bottom: 11),
-                height: 200,
-                color: const Color.fromARGB(255, 195, 74, 147),
-              ),
-            ],
+      body: ListView(
+        children: [
+          Padding(     
+            padding: const EdgeInsets.all(8.0),
+            child: Text(
+              'One',
+              style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),
+            ),
           ),
-        ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(
+              'Two',
+              style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),
+            ),
+          ),
+        ],
       ),
     );
   }
