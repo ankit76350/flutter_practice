@@ -37,43 +37,14 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body: Column(
-        children: [
-          const Text('Flex & Expanded Example', style: TextStyle(fontSize: 20)),
-
-          // FLEX BOX EXAMPLE
-          // const SizedBox(height: 20),
-
-          Flex(
-            direction: Axis.horizontal,
-            children: [
-              Expanded(
-                flex: 1,
-                child: Container(
-                  height: 100,
-                  color: Colors.red,
-                  child: const Center(child: Text("1 Flex")),
-                ),
-              ),
-              Expanded(
-                flex: 6,
-                child: Container(
-                  height: 100,
-                  color: Colors.green,
-                  child: const Center(child: Text("6 Flex")),
-                ),
-              ),
-              Expanded(
-                flex: 1,
-                child: Container(
-                  height: 100,
-                  color: Colors.blue,
-                  child: const Center(child: Text("1 Flex")),
-                ),
-              ),
-            ],
-          ),
-        ],
+      body: Center(
+        child: CircleAvatar(
+          backgroundImage: AssetImage('images/unnamed.jpg'),
+          backgroundColor: Colors.amber,
+          radius: 90,
+          // maxRadius: 100,
+          // minRadius: 80,
+        ),
       ),
     );
   }
