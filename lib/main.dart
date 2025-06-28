@@ -30,6 +30,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,15 +41,14 @@ class _MyHomePageState extends State<MyHomePage> {
       body: ListView.separated(
 
         itemBuilder: (context, index) {
-          return Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(
-              'One',
-              style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),
-            ),
+          return ListTile(
+            leading: Text('${index + 1}'),
+            title: Text("data $index"),
+            subtitle: Text('Number'),
+            trailing: Icon(Icons.add),
           );
         },
-        itemCount: 10, 
+        itemCount: 40, 
         separatorBuilder: (context,index){
           return Divider(height: 4, thickness: 2);
         }
