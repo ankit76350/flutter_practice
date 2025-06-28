@@ -39,7 +39,8 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         child: CircleAvatar(
-          backgroundImage: AssetImage('images/unnamed.jpg'),
+          child: Text("Ankit Kumar", style: TextStyle(color: Colors.black)),
+          // backgroundImage: AssetImage('images/unnamed.jpg'),
           backgroundColor: Colors.amber,
           radius: 90,
           // maxRadius: 100,
