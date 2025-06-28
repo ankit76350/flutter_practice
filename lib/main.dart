@@ -37,7 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body: ListView.builder(
+      body: ListView.separated(
 
         itemBuilder: (context, index) {
           return Padding(
@@ -49,9 +49,9 @@ class _MyHomePageState extends State<MyHomePage> {
           );
         },
         itemCount: 10, 
-        // separatorBuilder: (context,index){
-        //   return Divider(height: 4, thickness: 2,)
-        // }
+        separatorBuilder: (context,index){
+          return Divider(height: 4, thickness: 2);
+        }
       ),
     );
   }
