@@ -39,12 +39,20 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         child: CircleAvatar(
-          child: Text("Ankit Kumar", style: TextStyle(color: Colors.black)),
-          // backgroundImage: AssetImage('images/unnamed.jpg'),
-          backgroundColor: Colors.amber,
-          radius: 90,
-          // maxRadius: 100,
-          // minRadius: 80,
+          backgroundColor: Colors.green,
+          maxRadius: 60,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                width: 40,
+                height: 40,
+                child: Image.asset('images/unnamed.jpg'),
+              ),
+              SizedBox(height: 5),
+              Text('Name', style: TextStyle(color: Colors.white)),
+            ],
+          ),
         ),
       ),
     );
